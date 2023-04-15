@@ -6,4 +6,5 @@ return require('packer').startup(function(use)
   use 'glepnir/dashboard-nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'gelguy/wilder.nvim'
+  use 'neovim/nvim-lspconfig'
 end)
