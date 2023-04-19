@@ -36,5 +36,11 @@ require('orgmode').setup({
     org_default_notes_file = '~/Dropbox/org/refile.org',
 })
 
+require('lualine').setup(
+    {
+        options = { theme = 'gruvbox' }
+    }
+)
+
 vim.cmd("autocmd InsertLeave * silent !zenhan 0")
 os.execute('zenhan.exe 0')

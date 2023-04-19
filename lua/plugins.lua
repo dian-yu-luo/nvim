@@ -11,4 +11,5 @@ return require('packer').startup(function(use)
   use 'nvim-orgmode/orgmode'
   use 'gelguy/wilder.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'nvim-lualine/lualine.nvim'
 end)
