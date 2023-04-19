@@ -1,4 +1,3 @@
--- 安装Packer插件管理器（如果没有安装）
 if vim.fn.empty(vim.fn.glob('~/.local/share/nvim/site/pack/packer/start/packer.nvim')) > 0 then
     vim.cmd(
         '!git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim')
@@ -8,14 +7,28 @@ end
 require('plugins')
 require('core')
 
-vim.o.guifont = '霞鹜文楷等宽:h16'
-vim.o.clipboard = 'unnamed'
 
 require('dashboard').setup()
 vim.api.nvim_set_keymap('n', '<leader>d', ':Dashboard<CR>', { noremap = true, silent = true })
 
--- local wilder = require('wilder')
--- wilder.setup({modes = {':', '/', '?'}})
+require('nvim-treesitter.configs').setup {
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
+    sync_install = false,
+    auto_install = true,
+    ignore_install = { "javascript" },
+    highlight = {
+        enable = true,
+        disable = { "c", "rust" },
+        disable = function(lang, buf)
+            local max_filesize = 100 * 1024
+            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+            if ok and stats and stats.size > max_filesize then
+                return true
+            end
+        end,
+        additional_vim_regex_highlighting = false,
+    },
+}
 
 local telescope = require('telescope')
 vim.api.nvim_set_keymap('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>",
@@ -26,12 +39,10 @@ vim.api.nvim_set_keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin'
     { noremap = true, silent = true })
 
 require("which-key").setup {}
-
 require('lualine').setup(
     {
         options = { theme = 'gruvbox' }
     }
 )
-
 vim.cmd("autocmd InsertLeave * silent !zenhan 0")
 os.execute('zenhan.exe 0')
