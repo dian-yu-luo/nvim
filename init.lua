@@ -1,3 +1,10 @@
+-- 安装Packer插件管理器（如果没有安装）
+if vim.fn.empty(vim.fn.glob('~/.local/share/nvim/site/pack/packer/start/packer.nvim')) > 0 then
+    vim.cmd(
+        '!git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim')
+    vim.cmd('autocmd VimEnter * PackerInstall')
+end
+
 require('plugins')
 require('core')
 
