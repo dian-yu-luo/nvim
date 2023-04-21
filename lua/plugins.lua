@@ -12,4 +12,7 @@ return require('packer').startup(function(use)
   use 'gelguy/wilder.nvim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-lualine/lualine.nvim'
+  use 'TimUntersberger/neogit'
+  use 'sindrets/diffview.nvim'
+  use 'mhartington/formatter.nvim'
 end)

@@ -3,11 +3,10 @@ if vim.fn.empty(vim.fn.glob('~/.local/share/nvim/site/pack/packer/start/packer.n
         '!git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim')
     vim.cmd('autocmd VimEnter * PackerInstall')
 end
-
+-- 自定义配置的模块
 require('plugins')
 require('core')
-
-
+--[[ 前置的插件配置效果 ]]
 require('dashboard').setup()
 vim.api.nvim_set_keymap('n', '<leader>d', ':Dashboard<CR>', { noremap = true, silent = true })
 
@@ -44,5 +43,8 @@ require('lualine').setup(
         options = { theme = 'gruvbox' }
     }
 )
+require('neogit').setup {}
+require("formatter").setup {}
+
 vim.cmd("autocmd InsertLeave * silent !zenhan 0")
 os.execute('zenhan.exe 0')
