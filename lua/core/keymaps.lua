@@ -19,8 +19,10 @@ vim.api.nvim_set_keymap('i', '<C-k>', '<Esc>:lua delete_to_eol()<CR>', { noremap
 
 function delete_to_eol()
     local line = vim.fn.getline('.')
-    if #line == 0 or vim.fn.col('.') == #line + 1 then
-        vim.api.nvim_del_current_line()
+    if #line == 0 then
+        vim.api.nvim_feedkeys('dd', 'n', true)
+    elseif vim.fn.col('.') == #line then
+        vim.api.nvim_feedkeys('J', 'n', true)
     else
         vim.api.nvim_feedkeys('d$', 'n', true)
     end
