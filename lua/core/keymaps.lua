@@ -14,6 +14,9 @@ vim.api.nvim_set_keymap('c', '<C-B>', '<Left>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<Esc>b', '<S-Left>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<Esc>f', '<S-Right>', { noremap = true })
 vim.api.nvim_set_keymap('c', "<C-y>", '\"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-k>', ':lua delete_to_eol()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-k>', '<Esc>:lua delete_to_eol()<CR>', { noremap = true, silent = true })
+
 function delete_to_eol()
     local line = vim.fn.getline('.')
     if #line == 0 or vim.fn.col('.') == #line + 1 then
@@ -22,6 +25,3 @@ function delete_to_eol()
         vim.api.nvim_feedkeys('d$', 'n', true)
     end
 end
-
-vim.api.nvim_set_keymap('n', '<C-k>', ':lua delete_to_eol()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<C-k>', '<Esc>:lua delete_to_eol()<CR>', { noremap = true, silent = true })
