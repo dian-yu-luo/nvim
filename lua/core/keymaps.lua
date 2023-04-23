@@ -24,6 +24,6 @@ function delete_to_eol()
     elseif vim.fn.col('.') == #line then
         vim.api.nvim_feedkeys('J', 'n', true)
     else
-        vim.api.nvim_feedkeys('d$', 'n', true)
+        vim.api.nvim_feedkeys('ld$', 'n', true)
     end
 end
