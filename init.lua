@@ -46,6 +46,7 @@ require('lualine').setup(
 require('neogit').setup {}
 require("formatter").setup {}
 require('Comment').setup()
+require("nvim-tree").setup {}
 
 vim.cmd("autocmd InsertLeave * silent !zenhan 0")
 os.execute('zenhan.exe 0')

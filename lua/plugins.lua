@@ -16,4 +16,5 @@ return require('packer').startup(function(use)
     use 'sindrets/diffview.nvim'
     use 'mhartington/formatter.nvim'
     use 'numToStr/Comment.nvim'
+    use 'nvim-tree/nvim-tree.lua'
 end)
