@@ -14,12 +14,15 @@ cmp.setup({
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'vsnip' },
-    }, {
-        { name = 'buffer' },
-    })
+    sources = cmp.config.sources(
+        {
+            { name = 'nvim_lsp' },
+            { name = 'vsnip' },
+        },
+        {
+            { name = 'buffer' },
+        }
+    )
 })
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
