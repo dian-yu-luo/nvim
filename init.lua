@@ -6,8 +6,9 @@ end
 -- 自定义配置的模块
 require('plugins')
 require('core')
+
+
 --[[ 前置的插件配置效果 ]]
-require('dashboard').setup()
 vim.api.nvim_set_keymap('n', '<leader>d', ':Dashboard<CR>', { noremap = true, silent = true })
 
 require('nvim-treesitter.configs').setup {
@@ -37,12 +38,13 @@ vim.api.nvim_set_keymap('n', '<leader>fc', "<cmd>lua require('telescope.builtin'
 vim.api.nvim_set_keymap('n', '<leader>fh', "<cmd>lua require('telescope.builtin').command_history()<CR>",
     { noremap = true, silent = true })
 
-require("which-key").setup {}
 require('lualine').setup(
     {
         options = { theme = 'gruvbox' }
     }
 )
+require('dashboard').setup()
+require("which-key").setup {}
 require('neogit').setup {}
 require("formatter").setup {}
 require('Comment').setup()

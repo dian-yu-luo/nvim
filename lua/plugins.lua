@@ -18,4 +18,9 @@ return require("packer").startup(function(use)
     use "numToStr/Comment.nvim"
     use "nvim-tree/nvim-tree.lua"
     use "windwp/nvim-autopairs"
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
 end)
