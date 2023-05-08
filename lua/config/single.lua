@@ -1,4 +1,3 @@
-require('dashboard').setup()
 require("which-key").setup {}
 require('neogit').setup {}
 require("formatter").setup {}

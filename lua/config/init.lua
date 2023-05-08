@@ -1,3 +1,6 @@
 require("config.single")
 require("config.cmp")
 require("config.dashboard")
+require("config.treesitter")
+require("config.telescope")
+require("config.lualine")
