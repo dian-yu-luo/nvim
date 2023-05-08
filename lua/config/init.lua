@@ -1,1 +1,1 @@
-print("config")
+require("config.single")
