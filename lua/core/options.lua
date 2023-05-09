@@ -4,3 +4,7 @@ vim.opt.cursorline = true
 vim.g.mapleader = ' '
 vim.o.guifont = '霞鹜文楷等宽:h16'
 vim.o.clipboard = 'unnamed'
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
