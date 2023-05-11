@@ -7,6 +7,9 @@ cmp.setup({
     },
     window = {
     },
+    completion = {
+        completeopt = "menu,menuone",
+    },
     experimental = {
         ghost_text = {
             hl_group = false
