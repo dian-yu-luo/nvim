@@ -5,7 +5,7 @@ require('dashboard').setup({
             enable = true,
         },
         shortcut = {
-            { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'UU' },
+            { desc = '󰚰 Update', group = '@property', action = 'PackerSync', key = 'UU' },
             -- {
             --     icon = ' ',
             --     icon_hl = '@variable',
