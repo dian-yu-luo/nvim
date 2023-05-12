@@ -22,7 +22,6 @@ return require("packer").startup(function(use)
     use "folke/which-key.nvim"
     use "nvim-treesitter/nvim-treesitter"
     use "nvim-orgmode/orgmode"
-    use "gelguy/wilder.nvim"
     use "neovim/nvim-lspconfig"
     use "nvim-lualine/lualine.nvim"
     use "TimUntersberger/neogit"

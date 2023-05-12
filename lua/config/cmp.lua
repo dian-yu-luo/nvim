@@ -42,12 +42,18 @@ cmp.setup.filetype('gitcommit', {
     })
 })
 cmp.setup.cmdline({ '/', '?' }, {
+    completion = {
+        completeopt = "menu,menuone,noselect",
+    },
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
         { name = 'buffer' }
     }
 })
 cmp.setup.cmdline(':', {
+    completion = {
+        completeopt = "menu,menuone,noselect",
+    },
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
         { name = 'path' }
