@@ -37,6 +37,7 @@ return require("packer").startup(function(use)
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
     use "williamboman/mason.nvim"
+    use "L3MON4D3/LuaSnip"
 
     if packer_bootstrap then
         require('packer').sync()
