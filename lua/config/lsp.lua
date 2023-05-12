@@ -9,8 +9,8 @@ require 'lspconfig'.lua_ls.setup {
                 globals = { 'vim' },
             },
             workspace = {
-                -- library = vim.api.nvim_get_runtime_file("", true),
-                library= "~/.config/nvim"
+                library = vim.api.nvim_get_runtime_file("", true),
+                -- library= "~/.config/nvim"
             },
             telemetry = {
                 enable = false,
@@ -18,3 +18,6 @@ require 'lspconfig'.lua_ls.setup {
         },
     },
 }
+
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
