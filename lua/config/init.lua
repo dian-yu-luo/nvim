@@ -14,3 +14,4 @@ require("nvim-tree").setup {}
 require("nvim-autopairs").setup {}
 require("mason").setup {}
 require("toggleterm").setup()
+require('impatient').enable_profile()
