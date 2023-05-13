@@ -13,6 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 
 return require("packer").startup(function(use)
+    use "ahmedkhalf/project.nvim"
     use "akinsho/toggleterm.nvim"
     use "wbthomason/packer.nvim"
     use "nvim-tree/nvim-web-devicons"
