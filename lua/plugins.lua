@@ -13,7 +13,6 @@ local packer_bootstrap = ensure_packer()
 
 
 return require("packer").startup(function(use)
-    use 'lewis6991/impatient.nvim'
     use "akinsho/toggleterm.nvim"
     use "wbthomason/packer.nvim"
     use "nvim-tree/nvim-web-devicons"
@@ -22,7 +21,6 @@ return require("packer").startup(function(use)
     use "nvim-telescope/telescope.nvim"
     use "folke/which-key.nvim"
     use "nvim-treesitter/nvim-treesitter"
-    use "nvim-orgmode/orgmode"
     use "neovim/nvim-lspconfig"
     use "nvim-lualine/lualine.nvim"
     use "TimUntersberger/neogit"

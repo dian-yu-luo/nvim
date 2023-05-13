@@ -1,5 +1,8 @@
-require 'lspconfig'.pyright.setup {}
-require 'lspconfig'.lua_ls.setup {
+local lspconfig = require('lspconfig')
+local util = require "lspconfig/util"
+
+lspconfig.pyright.setup {}
+lspconfig.lua_ls.setup {
     settings = {
         Lua = {
             runtime = {
@@ -15,6 +18,20 @@ require 'lspconfig'.lua_ls.setup {
             telemetry = {
                 enable = false,
             },
+        },
+    },
+}
+
+lspconfig.gopls.setup {
+    cmd = { "gopls", "serve" },
+    filetypes = { "go", "gomod" },
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
         },
     },
 }
