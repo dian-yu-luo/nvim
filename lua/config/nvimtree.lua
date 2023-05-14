@@ -7,3 +7,4 @@ require("nvim-tree").setup({
         update_root = true
     },
 })
+vim.api.nvim_set_keymap('n', '<leader>j', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
