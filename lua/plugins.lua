@@ -13,6 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 
 return require("packer").startup(function(use)
+    use "dstein64/vim-startuptime"
     use "ahmedkhalf/project.nvim"
     use "akinsho/toggleterm.nvim"
     use "wbthomason/packer.nvim"
