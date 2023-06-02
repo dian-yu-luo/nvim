@@ -3,10 +3,10 @@ require("config.dashboard")
 require("config.treesitter")
 require("config.telescope")
 require("config.lualine")
+require("config.mason")
 require("config.lsp")
 require("config.nvimtree")
 require("config.project")
-require("config.mason")
 -- 一行就能解决的配置
 require("which-key").setup {}
 require('neogit').setup {}
