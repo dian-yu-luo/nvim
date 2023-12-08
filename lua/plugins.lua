@@ -37,6 +37,7 @@ return require("packer").startup(function(use)
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
     use "williamboman/mason.nvim"
+    use "rafamadriz/friendly-snippets"
     use "L3MON4D3/LuaSnip"
     use "williamboman/mason-lspconfig.nvim"
 

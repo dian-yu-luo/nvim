@@ -1,3 +1,4 @@
+require("config.luasnip")
 require("config.cmp")
 require("config.dashboard")
 require("config.treesitter")
