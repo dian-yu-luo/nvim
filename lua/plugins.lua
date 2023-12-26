@@ -40,6 +40,7 @@ return require("packer").startup(function(use)
     use "rafamadriz/friendly-snippets"
     use "L3MON4D3/LuaSnip"
     use "williamboman/mason-lspconfig.nvim"
+    use 'saadparwaiz1/cmp_luasnip'
 
     if packer_bootstrap then
         require('packer').sync()
